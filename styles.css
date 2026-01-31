@@ -36,35 +36,45 @@ template{display:none}
 
 @font-face {
     font-family: 'SpaceMonoBold';
-    src: url('./assets/fonts/SpaceMono-Bold.ttf')
+    src: url('./assets/fonts/SpaceMono-Bold.ttf');
+    font-weight: 700;
 }
 @font-face {
     font-family: 'SpaceMonoBoldItalic';
-    src: url('./assets/fonts/SpaceMono-BoldItalic.ttf')
+    src: url('./assets/fonts/SpaceMono-BoldItalic.ttf');
+    font-weight: 700;
 }
 @font-face {
     font-family: 'SpaceMonoItalic';
-    src: url('./assets/fonts/SpaceMono-Italic.ttf')
+    src: url('./assets/fonts/SpaceMono-Italic.ttf');
+    font-weight: 700;
 }
 @font-face {
     font-family: 'SpaceMono';
-    src: url('./assets/fonts/SpaceMono-Regular.ttf')
+    src: url('./assets/fonts/SpaceMono-Regular.ttf');
+    font-weight: 700;
 }
-.attribution a, .attribution a:visited {
-    text-decoration: none;
-    color: var(--Green900);
-    font-family: SpaceMonoBold, monospace;
-}
+
 :root {
-    --Green400: hsl(172, 67%, 45%);
-    --Green900: hsl(183, 100%, 15%);
-    --Grey500: hsl(186, 14%, 43%);
-    --Grey400: hsl(184, 14%, 56%);
-    --Grey200: hsl(185, 41%, 84%);
-    --Grey50: hsl(189, 47%, 97%);
-    --White: hsl(0, 100%, 100%);
+    --Gn400: hsl(172, 67%, 45%);
+    --Gn900: hsl(183, 100%, 15%);
+    --Gy500: hsl(186, 14%, 43%);
+    --Gy400: hsl(184, 14%, 56%);
+    --Gy200: hsl(185, 41%, 84%);
+    --Gy50: hsl(189, 47%, 97%);
+    --W: hsl(0, 100%, 100%);
 }
 
 body {
-    font-family: Space
+    font-family: SpaceMono, monospace;
+    background-color: var(--Gy200);
+}
+
+.attribution a, .attribution a:visited {
+    text-decoration: none;
+    color: var(--Gn900);
+    font-family: SpaceMonoBold, monospace;
+    font-weight: bold;
+    pointer-events: none;
+    cursor: default;
 }
