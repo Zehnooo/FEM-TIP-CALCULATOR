@@ -16,42 +16,47 @@
   <div id="grid">
     <form action="">
       <div>
-        <label for="bill">Bill</label>
+        <label for="bill" class="head">Bill</label>
+        <span class="cust-num-input">
+        <img src="./assets/images/icon-dollar.svg" alt="dollar sign">
         <input type="number" id="bill" step=".01" min="0.01">
+        </span>
       </div>
       <div>
-        <p>Select Tip %</p>
-        <div>
+        <p class="head">Select Tip %</p>
+        <div class="tip-container">
               <span class="btn tip">
                 <label for="fivepercent">5%</label>
-                <input type="radio" id="fivepercent" name="tip">
+
+
+                  <input type="radio" id="fivepercent" name="tip">
+
+
               </span>
-        </div>
-        <div>
-              <span class="btn tip">
+
+
+          <span class="btn tip">
                 <label for="tenpercent">10%</label>
                 <input type="radio" id="tenpercent" name="tip">
               </span>
-        </div>
-        <div>
-              <span class="btn tip">
+
+
+          <span class="btn tip">
                 <label for="fifteenpercent">15%</label>
                 <input type="radio" id="fifteenpercent" name="tip">
               </span>
-        </div>
-        <div>
-              <span class="btn tip">
+
+
+          <span class="btn tip">
                 <label for="twentyfivepercent">25%</label>
                 <input type="radio" id="twentyfivepercent" name="tip">
               </span>
-        </div>
-        <div>
+
               <span class="btn tip">
                 <label for="fiftypercent">50%</label>
                 <input type="radio" id="fiftypercent" name="tip">
               </span>
-        </div>
-        <div>
+
               <span class="btn cust">
                 <label for="custom">Custom</label>
                 <input type="radio" id="custom" name="tip">
@@ -59,33 +64,40 @@
         </div>
       </div>
       <div>
-        <label for="num-people">Number of People</label>
-        <input type="number" step="1" min="1" id="num-people">
+        <label for="num-people" class="head">Number of People</label>
+        <span class="cust-num-input">
+          <img src="./assets/images/icon-person.svg" alt="person icon">
+          <input type="number" step="1" min="1" id="num-people">
+        </span>
       </div>
     </form>
-    <div>
+    <div id="results">
       <div>
         <div>
-          <p>Tip Amount</p>
-          <p>/ person</p>
-          <h1 id="tip">0.00</h1>
+          <div>
+            <div>
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <h1><span id="tip">0.00</span></h1>
+          </div>
+          <div>
+            <div>
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <h1>$<span id="total">0.00</span></h1>
+          </div>
         </div>
-        <div>
-          <p>Total</p>
-          <p>/ person</p>
-          <h1 id="total">0.00</h1>
-        </div>
-        <button type="button" id="reset">RESET</button>
+        <button type="button" id="reset" class="btn">RESET</button>
       </div>
     </div>
   </div>
-  <div></div>
-</main>
-
-<div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Zehno</a>.
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Zehnooo" target="_blank">Zehno</a>.
   </div>
+</main>
 <script defer src="./script.js"></script>
 </body>
 </html>
