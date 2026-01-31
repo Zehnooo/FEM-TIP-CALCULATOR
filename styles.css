@@ -78,3 +78,49 @@ body {
     pointer-events: none;
     cursor: default;
 }
+
+form input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+form span {
+    width: 2rem;
+    height: auto;
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.tip {
+    color: var(--W);
+    background-color: var(--Gn900);
+}
+
+.cust {
+    color: var(--Gn900);
+    background-color: var(--W);
+}
+
+#container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    background-color: var(--W);
+    padding: 2rem;
+    border-radius: 12px;
+}
