@@ -182,7 +182,7 @@ form > div {
     align-items: center;
 }
 
-.btn.tip > span {
+.btn.tip > span, .cust > span {
     padding: .5rem;
     text-align: center;
 }
@@ -194,7 +194,7 @@ form > div {
     font-size: 12px;
 }
 
-.btn:hover, .reset-btn:hover {
+.tip:hover, .reset-btn:hover {
     color: var(--Gn900);
     background-color: var(--Gy200);
 }
@@ -238,14 +238,26 @@ form > div {
     border: none;
     border-radius: 12px;
     box-sizing: border-box;
-    outline: var(--Gn400) solid 2px;
+    outline: none;
     text-align: right;
     letter-spacing: .10rem;
+    caret-color: var(--Gn400);
+    color: var(--Gn900);
 }
+
 
 .cust {
     color: var(--Gn900);
     background-color: var(--Gy50);
+}
+
+#custom-tip-label {
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+#custom-tip-label.active {
+    border-color: var(--Gn400);
 }
 
 #custom-tip .hide {
@@ -263,7 +275,7 @@ form > div {
     border-radius: 4px;
     overflow-Y: hidden;
     height: 100%;
-    caret-color: var(--Gy200);
+    caret-color: transparent;
     position: relative;
 }
 

@@ -7,5 +7,6 @@ custInput.addEventListener('click', () => {
     custSpan.classList.add('hide');
     custInput.classList.add('reveal');
     custInput.classList.remove('hide');
+    custInputLabel.classList.add('active');
 });
 
