@@ -117,16 +117,15 @@ form {
 form .head {
     color: var(--Gn900);
     font-family: SpaceMonoBold, monospace;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
 }
 
 form > div {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
-    gap: 1rem;
+    gap: .25rem;
     width: 100%;
     text-align: left;
     margin: .5rem auto;
@@ -136,33 +135,22 @@ form > div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    gap: .5rem 0;
     width: 100%;
+    place-items: center;
 }
 
-form input {
+.num-input {
     width: 80%;
     font-size: 24px;
     font-family: SpaceMonoBold, monospace;
     border-radius: 12px;
-
 }
 
-form input[type=radio] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-form span {
+.btn span {
     width: max-content;
     height: auto;
     position: relative;
-
 }
 
 .btn {
@@ -170,14 +158,41 @@ form span {
     border-radius: 12px;
     padding: 1rem;
     cursor: pointer;
-    width: 75%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    width: 100px;
 }
 
-.btn > * {
+.reset-btn {
+    border: none;
+    border-radius: 12px;
+    padding: .5rem;
+    font-size: 12px;
+}
+
+.btn:hover, .reset-btn:hover {
+    color: var(--Gn900);
+    background-color: var(--Gy200);
+}
+
+.btn > *, .reset-btn {
     cursor: pointer;
-    padding: 1.5rem;
     font-family: SpaceMonoBold, monospace;
     font-size: 24px;
+}
+
+.btn input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn:not(.cust):has(input[type=radio]:checked) {
+    background-color: var(--Gn400);
+    color: var(--Gn900);
 }
 
 .tip {
@@ -185,9 +200,36 @@ form span {
     background-color: var(--Gn900);
 }
 
+.hide {
+    position: absolute;
+    opacity: 0;
+}
+
+.inactive {
+    opacity: .25;
+    cursor: not-allowed;
+}
+
+.reveal {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border: none;
+    border-radius: 12px;
+    outline: var(--Gn400) solid 2px;
+    text-align: right;
+    letter-spacing: .10rem;
+}
+
 .cust {
     color: var(--Gn900);
     background-color: var(--Gy50);
+}
+
+#custom-tip .hide {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .cust-num-input {
@@ -200,7 +242,7 @@ form span {
     overflow-Y: hidden;
     height: 100%;
     caret-color: var(--Gy200);
-
+    position: relative;
 }
 
 .cust-num-input > input {
@@ -209,14 +251,15 @@ form span {
     background: none;
     width: 100%;
     margin: 0 .5rem 0 .5rem;
-
+    color: var(--Gn900);
     text-align: right;
     overflow-Y: hidden;
     height: 100%;
 }
 
 .cust-num-input input::-webkit-outer-spin-button,
-.cust-num-input input::-webkit-inner-spin-button {
+.cust-num-input input::-webkit-inner-spin-button, .reveal::-webkit-outer-spin-button,
+.reveal::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
