@@ -138,8 +138,8 @@ form > div {
     gap: .5rem 0;
     width: 100%;
     place-items: center;
-}
 
+}
 .num-input {
     width: 80%;
     font-size: 24px;
@@ -153,17 +153,38 @@ form > div {
     position: relative;
 }
 
+
 .btn {
     border: none;
     border-radius: 12px;
-    padding: 1rem;
+    padding: 0;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     user-select: none;
     position: relative;
-    width: 100px;
+    width: 100%;
+    max-width: 150px;
+    overflow: hidden;
+}
+
+.btn > span,
+.btn > input[type="number"] {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    font-family: SpaceMonoBold, monospace;
+    font-size: 24px;
+    display: grid;
+    align-items: center;
+}
+
+.btn.tip > span {
+    padding: .5rem;
+    text-align: center;
 }
 
 .reset-btn {
@@ -212,10 +233,11 @@ form > div {
 
 .reveal {
     position: absolute;
-    width: 95%;
-    height: 95%;
+    inset: 0;
+    padding: .5rem;
     border: none;
     border-radius: 12px;
+    box-sizing: border-box;
     outline: var(--Gn400) solid 2px;
     text-align: right;
     letter-spacing: .10rem;
